@@ -14,6 +14,18 @@
         ></script>
       </head>
       <body>
+        <button id="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode</button>
         <div class="content">{% block content %} {% endblock %}</div>
+        <script>
+          const toggleDarkMode = () => {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+          };
+          
+          if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+          }
+        </script>
       </body>
     </html>

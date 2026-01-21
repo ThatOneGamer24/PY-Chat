@@ -39,6 +39,7 @@
     overflow-y: scroll;
     flex: 1;
     width: 100%;
+    color: black;
 }
 
 .imputs {
@@ -48,8 +49,48 @@
 
 h2 {
     text-align: center;
+    color: black;
 }
 
 #message {
     flex: 1;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: whitesmoke;
+}
+
+body.dark-mode .message-box {
+    background-color: black;
+    border-color: black;
+}
+
+body.dark-mode .messages {
+    color: whitesmoke;
+    background-color: black;
+}
+
+body.dark-mode input,
+body.dark-mode button {
+    background-color: #333;
+    color: whitesmoke;
+    border-color: black;
+}
+
+#dark-mode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+body.dark-mode #dark-mode-btn {
+    background-color: #555;
 }
